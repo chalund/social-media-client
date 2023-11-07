@@ -22,7 +22,7 @@ describe("Authentication", () => {
           const token = win.localStorage.getItem("token");
           expect(profile).to.not.be.null;
           expect(token).to.not.be.null;
-        });
+          });
       });
     
       cy.url().should("include", "profile");
