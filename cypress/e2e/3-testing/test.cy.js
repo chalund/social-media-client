@@ -15,7 +15,7 @@ describe("Authentication", () => {
       cy.wait(1000);
       cy.get("input[type='password']:visible").should("exist").type("12345678");
       cy.wait(1000);
-      cy.get(".btn-success:visible").click();
+      cy.get(".btn-success:visible").click({ multiple: true });
       cy.window({ log: false }).then((win) => {
         cy.wrap(null, { timeout: 3000 }).should(() => {
           const profile = win.localStorage.getItem("profile");
@@ -39,7 +39,7 @@ describe("Authentication", () => {
       cy.wait(1000);
       cy.get("input[type='password']:visible").should("exist").type("1234567890");
       cy.wait(1000);
-      cy.get("button[type='submit']:visible").click();
+      cy.get("button[type='submit']:visible").click({ multiple: true });
       cy.wait(1000);
     
       cy.get("#loginModal:visible")
@@ -62,9 +62,9 @@ describe("Authentication", () => {
         cy.wait(1000)
         cy.get("input[type='password']:visible").should("exist").type("12345678");
         cy.wait(1000)
-        cy.get(".btn-success:visible").click();
+        cy.get(".btn-success:visible").click({ multiple: true });
         cy.wait(1000)
-        cy.get("button[data-auth='logout']:visible").click();
+        cy.get("button[data-auth='logout']:visible").click({ multiple: true });
     });
 
 });
