@@ -11,7 +11,7 @@ describe("Authentication", () => {
         cy.wait(1000)
         cy.get("button[data-auth='login']:visible").click();
         cy.wait(1000)
-        cy.get("input[type='email']:visible").should("exist").type("cha@noroff.no");
+        cy.get("input[type='email']:visible").should("exist").type("hellouser@noroff.no");
         cy.wait(1000)
         cy.get("input[type='password']:visible").should("exist").type("12345678");
         cy.wait(1000)
@@ -35,7 +35,7 @@ describe("Authentication", () => {
             cy.wait(1000)
             cy.get("button[data-auth='login']:visible").click();
             cy.wait(1000)
-            cy.get("input[type='email']:visible").should("exist").type("cha@noroff.no");
+            cy.get("input[type='email']:visible").should("exist").type("hellouser@noroff.no");
             cy.wait(1000)
             cy.get("input[type='password']:visible").should("exist").type("1234567890");
             cy.wait(1000)
@@ -57,7 +57,7 @@ describe("Authentication", () => {
         cy.wait(1000)
         cy.get("button[data-auth='login']:visible").click();
         cy.wait(1000)
-        cy.get("input[type='email']:visible").should("exist").type("cha@noroff.no");
+        cy.get("input[type='email']:visible").should("exist").type("hellouser@noroff.no");
         cy.wait(1000)
         cy.get("input[type='password']:visible").should("exist").type("12345678");
         cy.wait(1000)
