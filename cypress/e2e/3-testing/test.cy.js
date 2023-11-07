@@ -15,7 +15,7 @@ describe("Authentication", () => {
       cy.wait(1000);
       cy.get("input[type='password']:visible").should("exist").type("12345678");
       cy.wait(1000);
-      cy.get(".btn-success:visible").click({ multiple: true });
+      cy.get(".btn-success:visible").click();
       cy.window({ log: false }).then((win) => {
         cy.wrap(null, { timeout: 3000 }).should(() => {
           const profile = win.localStorage.getItem("profile");
