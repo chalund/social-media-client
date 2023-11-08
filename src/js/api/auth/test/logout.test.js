@@ -1,4 +1,4 @@
-import { logout } from "./logout";
+import { logout } from "../logout";
 
 describe('logout function', () => {
     // Mock localStorage functions
