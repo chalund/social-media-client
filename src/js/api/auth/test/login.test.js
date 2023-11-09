@@ -1,4 +1,4 @@
-import { login } from './login';
+import { login } from '../login';
 
 import 'jest-localstorage-mock';
 
@@ -22,8 +22,8 @@ describe('Login Function', () => {
 
 // Test a successful login
   test('Successful Login', async () => {
-    const email = 'testuser@noroff.com';
-    const password = '123456789';
+    const email = 'workflowtester1@noroff.com';
+    const password = '12345678';
 
     const profile = await login(email, password);
 
@@ -40,7 +40,7 @@ describe('Login Function', () => {
       })
     );
 
-    const email = 'testuser@noroff.com';
+    const email = 'workflowtester1@noroff.com';
     const password = 'invalid_password';
 
     await expect(login(email, password)).rejects.toThrow('Unauthorized');
