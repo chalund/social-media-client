@@ -1,13 +1,15 @@
-[![Automated Unit Testing](https://github.com/chalund/social-media-client/actions/workflows/unit-test.yml/badge.svg)](https://github.com/chalund/social-media-client/actions/workflows/unit-test.yml)[![Code Review](https://github.com/chalund/social-media-client/actions/workflows/gpt.yml/badge.svg)](https://github.com/chalund/social-media-client/actions/workflows/gpt.yml)[![Deploy static content to Pages](https://github.com/chalund/social-media-client/actions/workflows/pages.yml/badge.svg)](https://github.com/chalund/social-media-client/actions/workflows/pages.yml)[![Code Review](https://github.com/chalund/social-media-client/actions/workflows/gpt.yml/badge.svg)](https://github.com/chalund/social-media-client/actions/workflows/gpt.yml)
+[![Automated Unit Testing](https://github.com/chalund/social-media-client/actions/workflows/unit-test.yml/badge.svg)](https://github.com/chalund/social-media-client/actions/workflows/unit-test.yml) [![Code Review](https://github.com/chalund/social-media-client/actions/workflows/gpt.yml/badge.svg)] (https://github.com/chalund/social-media-client/actions/workflows/gpt.yml) [![Deploy static content to Pages](https://github.com/chalund/social-media-client/actions/workflows/pages.yml/badge.svg)](https://github.com/chalund/social-media-client/actions/workflows/pages.yml) [![Code Review](https://github.com/chalund/social-media-client/actions/workflows/gpt.yml/badge.svg)](https://github.com/chalund/social-media-client/actions/workflows/gpt.yml)
 
-# Workflow CA
+# Workflow CA: social-media-client
 ## Description
 This school project centers on enhancing the quality of a software package through the application of efficient development practices, drawing upon the knowledge and skills acquired in our course. It involves the utilization of diverse web technologies and testing tools to create a more streamlined and robust development process, reducing the likelihood of errors.
 
+
 ## Table of Contents
-[Description](#description)
-[Installation](#installation)
-[Testing](#testing)
+* [Description](#description)
+* [Installation](#installation)
+* [Testing](#testing)
+* [Contributing](#contributing)
 
 ## Installation
 Clone the repo, open and initialize git.
