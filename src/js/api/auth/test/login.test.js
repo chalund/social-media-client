@@ -1,17 +1,18 @@
-import { login } from '../login';
+import { login } from "../login";
 
-import 'jest-localstorage-mock';
+import "jest-localstorage-mock";
 
 // Mock the fetch function used in the login function
 global.fetch = jest.fn(() =>
   Promise.resolve({
-    ok: true, 
-    json: () => Promise.resolve({ accessToken: 'testToken', otherData: 'data' }),
-    statusText: 'OK',
-  })
+    ok: true,
+    json: () =>
+      Promise.resolve({ accessToken: "testToken", otherData: "data" }),
+    statusText: "OK",
+  }),
 );
 
-describe('Login Function', () => {
+describe("Login Function", () => {
   beforeEach(() => {
     localStorage.clear();
   });
@@ -20,33 +21,31 @@ describe('Login Function', () => {
     jest.clearAllMocks();
   });
 
-// Test a successful login
-  test('Successful Login', async () => {
-    const email = 'workflowtester1@noroff.com';
-    const password = '12345678';
+  // Test a successful login
+  test("Successful Login", async () => {
+    const email = "workflowtester1@noroff.com";
+    const password = "12345678";
 
     const profile = await login(email, password);
 
-    expect(profile).toEqual({ otherData: 'data' });
-    expect(localStorage.getItem('token')).toBe('"testToken"');
+    expect(profile).toEqual({ otherData: "data" });
+    expect(localStorage.getItem("token")).toBe('"testToken"');
   });
 
- // Test a failed login (mocking a failed API response)
-  test('Failed Login', async () => {
+  // Test a failed login (mocking a failed API response)
+  test("Failed Login", async () => {
     global.fetch = jest.fn(() =>
       Promise.resolve({
         ok: false,
-        statusText: 'Unauthorized',
-      })
+        statusText: "Unauthorized",
+      }),
     );
 
-    const email = 'workflowtester1@noroff.com';
-    const password = 'invalid_password';
+    const email = "workflowtester1@noroff.com";
+    const password = "invalid_password";
 
-    await expect(login(email, password)).rejects.toThrow('Unauthorized');
+    await expect(login(email, password)).rejects.toThrow("Unauthorized");
 
-    expect(localStorage.getItem('token')).toBe(null);
+    expect(localStorage.getItem("token")).toBe(null);
   });
 });
-
-
